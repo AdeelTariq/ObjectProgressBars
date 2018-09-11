@@ -122,6 +122,7 @@ namespace ObjectProgressBars
 			this.config = this.Helper.ReadConfig<Configuration>();
 			InputEvents.ButtonPressed += this.InputEvents_ButtonPressed;
 			GraphicsEvents.OnPreRenderHudEvent += this.Draw;
+			this.showing = this.config.DisplayProgressBars;
         }
 
 
@@ -133,6 +134,8 @@ namespace ObjectProgressBars
 
 			if (e.Button.Equals(config.ToggleDisplay.key.ToSButton())) {
 				this.showing = !this.showing;
+				this.config.DisplayProgressBars = this.showing;
+				this.Helper.WriteConfig(this.config);
 				debug_printed = false;
 			}
         }
@@ -151,7 +154,7 @@ namespace ObjectProgressBars
 						}
 
 						if (!debug_printed) {
-							
+							//this.Monitor.Log(gameObject.Name + "_" + gameObject.TileLocation);
 						}
                         
                         float x = item.X;
@@ -188,7 +191,6 @@ namespace ObjectProgressBars
 						} else {    // save a guessed time for this machine at this location
 							GUESSED_MACHINE_TIMES.Add (gameObject.Name + "_" + 
 							                           gameObject.TileLocation, gameObject.MinutesUntilReady);
-							//this.Monitor.Log(gameObject.Name + "_" + gameObject.TileLocation);
 						}
 
 						if (percentage > 1) {   // don't show progress bar for 100 or more percentage

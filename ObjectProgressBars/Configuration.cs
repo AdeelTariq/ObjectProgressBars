@@ -11,5 +11,11 @@ namespace ObjectProgressBars
             set;
         } = new InputButton((Keys)80);
 
+		public bool DisplayProgressBars
+        {
+            get;
+            set;
+		} = true;
+
     }
 }
