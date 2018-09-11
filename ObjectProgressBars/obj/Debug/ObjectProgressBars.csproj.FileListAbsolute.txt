@@ -1,0 +1,5 @@
+/home/adeel/Projects/ObjectProgressBars/ObjectProgressBars/bin/Debug/ObjectProgressBars.dll
+/home/adeel/Projects/ObjectProgressBars/ObjectProgressBars/bin/Debug/ObjectProgressBars.pdb
+/home/adeel/Projects/ObjectProgressBars/ObjectProgressBars/obj/Debug/ObjectProgressBars.csproj.CoreCompileInputs.cache
+/home/adeel/Projects/ObjectProgressBars/ObjectProgressBars/obj/Debug/ObjectProgressBars.dll
+/home/adeel/Projects/ObjectProgressBars/ObjectProgressBars/obj/Debug/ObjectProgressBars.pdb
