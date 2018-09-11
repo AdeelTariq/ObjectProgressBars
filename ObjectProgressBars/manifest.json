@@ -6,5 +6,5 @@
     "UniqueID": "Adeel.ObjectProgressbars",
     "EntryDll": "ObjectProgressBars.dll",
    "MinimumApiVersion": "2.0",
-   "UpdateKeys": []
+   "UpdateKeys": [ "Nexus:2803" ]
 }

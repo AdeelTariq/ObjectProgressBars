@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ObjectProgressBars/ModEntry.cs">
     <Files>
-      <File FileName="ObjectProgressBars/ModEntry.cs" Line="133" Column="107" />
-      <File FileName="ObjectProgressBars/manifest.json" Line="2" Column="28" />
+      <File FileName="ObjectProgressBars/ModEntry.cs" Line="50" Column="75" />
+      <File FileName="ObjectProgressBars/manifest.json" Line="10" Column="2" />
       <File FileName="ObjectProgressBars/Configuration.cs" Line="4" Column="29" />
       <File FileName="ObjectProgressBars/DictionaryExtentions.cs" Line="41" Column="24" />
     </Files>

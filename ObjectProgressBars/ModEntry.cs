@@ -188,8 +188,7 @@ namespace ObjectProgressBars
 						} else {    // save a guessed time for this machine at this location
 							GUESSED_MACHINE_TIMES.Add (gameObject.Name + "_" + 
 							                           gameObject.TileLocation, gameObject.MinutesUntilReady);
-							this.Monitor.Log(gameObject.Name + "_" +
-							                 gameObject.TileLocation);
+							//this.Monitor.Log(gameObject.Name + "_" + gameObject.TileLocation);
 						}
 
 						if (percentage > 1) {   // don't show progress bar for 100 or more percentage
@@ -200,7 +199,9 @@ namespace ObjectProgressBars
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 4, (int)y - 4, 48, 16), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.863f, 0.482f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 2, (int)y - 2, 44, 12), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.694f, 0.306f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x, (int)y, 40, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color (1.0f, 0.843f, 0.537f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-						((SpriteBatch) spriteBatch).Draw(Game1.staminaRect, new Rectangle((int) x, (int) y, (int)(40f * percentage), 8), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
+						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int) x, (int) y, (int)(40f * percentage), 8), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
+						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
+						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(Color.Black, 0.2f), 0f, Vector2.Zero, SpriteEffects.None, 0.887f);
                                           
 					} else if (gameObject.MinutesUntilReady == 0) { // remove from guessed times
 						if (!string.Equals($"{gameObject.heldObject}", "null")) {

@@ -1,23 +1,24 @@
 
 Object Progress Bars - 1.0.0
-Shows progress bars on processing or artisan goods machines. Use keyboard key 'P' to toggle progress bars (configurable).
+Shows progress bars on refining or artisan goods machines. Use keyboard key 'P' to toggle progress bars (configurable).
 
-:: REQUIREMENTS::
+REQUIREMENTS:
 • Stardew Valley 1.3
-• SMAPI 2.0 or later
+• SMAPI 2.7 or later
 
-:: INSTALLATION::
+INSTALLATION:
 • Unzip the mod folder into Stardew Valley/Mods
 
-:: FEATURES::
-• Calculates percentage progress based on the time left until processing will be complete and total time a machine takes for completion according to wiki.
+FEATURES:
+• Shows accurate progress bars that can be toggled on/off with a shortcut key.
+• Calculates  progress based on the time left until processing will be complete and total time a machine takes for completion, according to the wiki.
 • Guesses progress for the few machines (Worm Bin, Oil Maker, Cask(?)) that don't have a determinable total time.
-• Progress bars closely resemble original game UI.
+• Progress bars resemble original game UI.
 
-:: CAVEATS::
-• Worm Bin and Oil Maker progress might look inconsistent everytime game is loaded since the total time is being guessed. However they do sort of provide a correct estimation of time left on processing.
-• Cask wasn't tested since I don't have a cellar. It's behaviour might be weird.
+CAVEATS:
+• Worm Bin and Oil Maker progress might look inconsistent every time game is loaded since the total time is being guessed. However they do sort of provide a correct estimation of time left on processing.
+• Cask wasn't tested since I don't have a cellar. It's behavior might be weird.
 • Mod was only tested on Linux.
 
-::  CREDITS::
+CREDITS:
 ♦ spacechase0's Object Time Left was used as a starting point.
