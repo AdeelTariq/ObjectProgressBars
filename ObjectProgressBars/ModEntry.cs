@@ -9,7 +9,6 @@ using System.Collections.Generic;
 
 namespace ObjectProgressBars
 {
-	/// <summary>The mod entry point.</summary>
 	public class ModEntry : Mod
 	{
 
@@ -43,7 +42,57 @@ namespace ObjectProgressBars
 			MACHINE_TIMES.Add("Keg_Coffee", 120);
 
 			MACHINE_TIMES.Add("Crystalarium_Diamond", 5 * 24 * 60);
-			MACHINE_TIMES.Add("Crystalarium_", 20);
+			MACHINE_TIMES.Add("Crystalarium_Star Shards", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Helvite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Neptunite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Fire Opal", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Bixite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Dolomite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Tigerseye", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Emerald", 2 * 24 * 60 + 2 * 60);
+			MACHINE_TIMES.Add("Crystalarium_Ruby", 2 * 24 * 60 + 2 * 60);
+			MACHINE_TIMES.Add("Crystalarium_Kyanite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Fairy Stone", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Ocean Stone", 3 * 24 * 60 + 11 * 60 + 20);         
+			MACHINE_TIMES.Add("Crystalarium_Jade", 1 * 24 * 60 + 16 * 60    );
+			MACHINE_TIMES.Add("Crystalarium_Fluorapatite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Lunarite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Lemon Stone", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Ghost Crystal", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Obsidian", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Aquamarine", 1 * 24 * 60 + 13 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Basalt", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Opal", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Alamite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Geminite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Jamborite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Jasper", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Hematite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Aerinite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Celestine", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Petrified Slime", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Pyrite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Soapstone", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Jagoite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Marble", 3 * 24 * 60 + 11 * 60 + 20);         
+			MACHINE_TIMES.Add("Crystalarium_Amethyst", 22 * 60 + 40);
+			MACHINE_TIMES.Add("Crystalarium_Fire Quartz", 21 * 60 + 40);
+			MACHINE_TIMES.Add("Crystalarium_Esperite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Malachite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Thunder Egg", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Slate", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Topaz", 18 * 60 + 40);
+			MACHINE_TIMES.Add("Crystalarium_Nekoite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Orpiment", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Frozen Tear", 18 * 60 + 40);
+			MACHINE_TIMES.Add("Crystalarium_Calcite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Granite", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Sandstone", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Earth Crystal", 13 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Baryte", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Quartz", 7 * 60);
+			MACHINE_TIMES.Add("Crystalarium_Mudstone", 3 * 24 * 60 + 11 * 60 + 20);
+			MACHINE_TIMES.Add("Crystalarium_Limestone", 3 * 24 * 60 + 11 * 60 + 20);
 			         
 			MACHINE_TIMES.Add("Tapper_Maple Syrup", 8 * 24 * 60 + 12);
 			MACHINE_TIMES.Add("Tapper_Oak Resin", 7 * 24 * 60 + 12);
@@ -66,6 +115,7 @@ namespace ObjectProgressBars
 		}
 
 		private static Dictionary<string, int> GUESSED_MACHINE_TIMES = new Dictionary<string, int>();
+
   
         public override void Entry(IModHelper helper)
         {
@@ -114,11 +164,11 @@ namespace ObjectProgressBars
 
 						float percentage = 0;
 
-						if (MACHINE_TIMES.ContainsKey(gameObject.Name)) {
+						if (MACHINE_TIMES.ContainsKey(gameObject.Name)) {   // check if a predetermined time is stored for this machine
 							float totalMachineTime = MACHINE_TIMES[gameObject.Name] / 10.0f;
 							percentage = (totalMachineTime - gameObject.MinutesUntilReady / 10.0f) / totalMachineTime;
                         
-						} else if (MACHINE_TIMES.ContainsKeyPattern(gameObject.Name + "_" + ((StardewValley.Object)gameObject.heldObject).Name)) {
+						} else if (MACHINE_TIMES.ContainsKeyPattern(gameObject.Name + "_" + ((StardewValley.Object)gameObject.heldObject).Name)) {  // check if a predetermined time is stored for this machine and the item it holds
 							float totalMachineTime = MACHINE_TIMES.GetItemByKeyPattern(gameObject.Name 
                             + "_" + ((StardewValley.Object)gameObject.heldObject).Name) / 10.0f;
 
@@ -128,13 +178,14 @@ namespace ObjectProgressBars
 
 							percentage = (totalMachineTime - gameObject.MinutesUntilReady / 10.0f) / totalMachineTime;
 
-						} else if (GUESSED_MACHINE_TIMES.ContainsKey(gameObject.Name + "_" + gameObject.TileLocation)) {
+						} else if (GUESSED_MACHINE_TIMES.ContainsKey(gameObject.Name + "_" + gameObject.TileLocation)) {    // check if a guessed time is stored for this machine at the current tile location 
+							// (location used as a unique identifier, maybe problemtic if the same location is occupied in a different map)
 
 							float totalMachineTime = GUESSED_MACHINE_TIMES[gameObject.Name + "_" + gameObject.TileLocation] / 10.0f;
        
 							percentage = (totalMachineTime - gameObject.MinutesUntilReady / 10.0f) / totalMachineTime;
 
-						} else {
+						} else {    // save a guessed time for this machine at this location
 							GUESSED_MACHINE_TIMES.Add (gameObject.Name + "_" + 
 							                           gameObject.TileLocation, gameObject.MinutesUntilReady);
 							this.Monitor.Log(gameObject.Name + "_" +
@@ -150,10 +201,8 @@ namespace ObjectProgressBars
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 2, (int)y - 2, 44, 12), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.694f, 0.306f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x, (int)y, 40, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color (1.0f, 0.843f, 0.537f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch) spriteBatch).Draw(Game1.staminaRect, new Rectangle((int) x, (int) y, (int)(40f * percentage), 8), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
-                        
-						//((SpriteBatch) spriteBatch).DrawString(Game1.dialogueFont, text, new Vector2(x, y), Color.White);
-					
-					} else if (gameObject.MinutesUntilReady == 0) {
+                                          
+					} else if (gameObject.MinutesUntilReady == 0) { // remove from guessed times
 						if (!string.Equals($"{gameObject.heldObject}", "null")) {
 							GUESSED_MACHINE_TIMES.Remove(gameObject.Name + "_" + gameObject.TileLocation);
 						}

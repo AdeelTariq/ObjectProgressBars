@@ -12,7 +12,7 @@ Shows progress bars on processing or artisan goods machines. Use keyboard key 'P
 :: FEATURES::
 • Calculates percentage progress based on the time left until processing will be complete and total time a machine takes for completion according to wiki.
 • Guesses progress for the few machines (Worm Bin, Oil Maker, Cask(?)) that don't have a determinable total time.
-• Progress bars resembles original game UI.
+• Progress bars closely resemble original game UI.
 
 :: CAVEATS::
 • Worm Bin and Oil Maker progress might look inconsistent everytime game is loaded since the total time is being guessed. However they do sort of provide a correct estimation of time left on processing.
