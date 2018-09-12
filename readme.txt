@@ -21,4 +21,4 @@ CAVEATS:
 • Mod was only tested on Linux.
 
 CREDITS:
-♦ spacechase0's Object Time Left was used as a starting point.
+♦ spacechase0's Object Time Left was used as a starting point. 1.0.1

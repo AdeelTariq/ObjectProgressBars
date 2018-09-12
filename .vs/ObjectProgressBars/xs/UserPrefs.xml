@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="ObjectProgressBars/ModEntry.cs">
     <Files>
-      <File FileName="ObjectProgressBars/ModEntry.cs" Line="50" Column="75" />
-      <File FileName="ObjectProgressBars/manifest.json" Line="10" Column="2" />
-      <File FileName="ObjectProgressBars/Configuration.cs" Line="4" Column="29" />
+      <File FileName="ObjectProgressBars/ModEntry.cs" Line="210" Column="48" />
+      <File FileName="ObjectProgressBars/manifest.json" Line="9" Column="31" />
+      <File FileName="ObjectProgressBars/Configuration.cs" Line="14" Column="14" />
       <File FileName="ObjectProgressBars/DictionaryExtentions.cs" Line="41" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

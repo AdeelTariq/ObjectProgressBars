@@ -202,8 +202,12 @@ namespace ObjectProgressBars
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 2, (int)y - 2, 44, 12), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.694f, 0.306f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x, (int)y, 40, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color (1.0f, 0.843f, 0.537f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
 						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int) x, (int) y, (int)(40f * percentage), 8), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
-						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(Color.Black, 0.2f), 0f, Vector2.Zero, SpriteEffects.None, 0.887f);
+
+						Color progressColor = Utility.getRedToGreenLerpColor(percentage);
+						Vector3 colorVector = progressColor.ToVector3();
+						colorVector.X = DarkenColor (colorVector.X); colorVector.Y = DarkenColor(colorVector.Y); colorVector.Z = DarkenColor(colorVector.Z);
+						Color darkenedColor = new Color(colorVector);
+						((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, darkenedColor, 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
                                           
 					} else if (gameObject.MinutesUntilReady == 0) { // remove from guessed times
 						if (!string.Equals($"{gameObject.heldObject}", "null")) {
@@ -215,6 +219,16 @@ namespace ObjectProgressBars
 
 			debug_printed = true;
         }
+
+		private float DarkenColor (float color) {
+			int toSubtract = 50;
+			int intColor = (int)(color * 255);
+			intColor = intColor - toSubtract;
+			if (intColor < 0) {
+				return 0;
+			}
+			return intColor / 255.0f;
+		}
 
     }
 }
