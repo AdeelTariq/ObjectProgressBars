@@ -120,13 +120,13 @@ namespace ObjectProgressBars
         public override void Entry(IModHelper helper)
         {
 			this.config = this.Helper.ReadConfig<Configuration>();
-			InputEvents.ButtonPressed += this.InputEvents_ButtonPressed;
-			GraphicsEvents.OnPreRenderHudEvent += this.Draw;
+			helper.Events.Input.ButtonPressed += this.OnButtonPressed;
+			helper.Events.Display.RenderingHud += this.Draw;
 			this.showing = this.config.DisplayProgressBars;
         }
 
 
-        private void InputEvents_ButtonPressed(object sender, EventArgsInput e)
+        private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)
