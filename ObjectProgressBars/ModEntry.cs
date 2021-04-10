@@ -19,8 +19,6 @@ namespace ObjectProgressBars
         private Configuration config;
         private bool showing = true;
 
-        private bool debug_printed = false;
-
         private static readonly Dictionary<string, int> MACHINE_TIMES = new Dictionary<string, int>();
         static ModEntry() {
             MACHINE_TIMES.Add("Bee House", 6100);
@@ -136,12 +134,18 @@ namespace ObjectProgressBars
                 this.showing = !this.showing;
                 this.config.DisplayProgressBars = this.showing;
                 this.Helper.WriteConfig(this.config);
-                debug_printed = false;
             }
         }
 
         private void Draw(object sender, EventArgs args)
         {
+
+            Vector2 size1 = Utility.ModifyCoordinatesForUIScale(new Vector2(52, 20));
+            Vector2 size2 = Utility.ModifyCoordinatesForUIScale(new Vector2(48, 16));
+            Vector2 size3 = Utility.ModifyCoordinatesForUIScale(new Vector2(44, 12));
+            Vector2 size4 = Utility.ModifyCoordinatesForUIScale(new Vector2(40, 8));
+            Vector2 size6 = Utility.ModifyCoordinatesForUIScale(new Vector2(4, 8));
+
             if (this.showing && Context.IsWorldReady && Context.IsPlayerFree)
             {
                 SpriteBatch spriteBatch = Game1.spriteBatch;
@@ -152,14 +156,10 @@ namespace ObjectProgressBars
                         if (gameObject.Name.Equals (STONE)) {
                             continue;
                         }
-
-                        if (!debug_printed) {
-                            //this.Monitor.Log(gameObject.Name + "_" + gameObject.TileLocation);
-                        }
                         
                         float x = item.X;
                         float y = item.Y;
-                        Vector2 val2 = Game1.GlobalToLocal(Game1.viewport, new Vector2(x * 64f, y * 64f));
+                        Vector2 val2 = Game1.GlobalToLocal(Game1.uiViewport, new Vector2(x * 64, y * 64));
                         x = val2.X;
                         y = val2.Y;
 
@@ -196,18 +196,26 @@ namespace ObjectProgressBars
                         if (percentage > 1) {   // don't show progress bar for 100 or more percentage
                             continue;
                         }
+                        Vector2 pos1 = Utility.ModifyCoordinatesForUIScale(new Vector2(x - 6, y - 6));
+                        Vector2 pos2 = Utility.ModifyCoordinatesForUIScale(new Vector2(x - 4, y - 4));
+                        Vector2 pos3 = Utility.ModifyCoordinatesForUIScale(new Vector2(x - 2, y - 2));
+                        Vector2 pos4 = Utility.ModifyCoordinatesForUIScale(new Vector2(x, y));
+                        Vector2 pos5 = Utility.ModifyCoordinatesForUIScale(new Vector2(x + (36f * percentage), y));
 
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 6, (int)y - 6, 52, 20), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.357f, 0.169f, 0.165f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 4, (int)y - 4, 48, 16), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.863f, 0.482f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x - 2, (int)y - 2, 44, 12), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.694f, 0.306f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x, (int)y, 40, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color (1.0f, 0.843f, 0.537f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int) x, (int) y, (int)(40f * percentage), 8), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
+                        Vector2 size5 = Utility.ModifyCoordinatesForUIScale(new Vector2(40f * percentage, 8));
+
+
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos1.ToPoint(), size1.ToPoint()), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.357f, 0.169f, 0.165f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos2.ToPoint(), size2.ToPoint()), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.863f, 0.482f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos3.ToPoint(), size3.ToPoint()), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color(0.694f, 0.306f, 0.02f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos4.ToPoint(), size4.ToPoint()), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, new Color (1.0f, 0.843f, 0.537f), 0f, Vector2.Zero, (SpriteEffects)0, 0.887f);
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos4.ToPoint(), size5.ToPoint()), (Rectangle)((Texture2D) Game1.staminaRect).Bounds, Utility.getRedToGreenLerpColor(percentage), 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
 
                         Color progressColor = Utility.getRedToGreenLerpColor(percentage);
                         Vector3 colorVector = progressColor.ToVector3();
                         colorVector.X = DarkenColor (colorVector.X); colorVector.Y = DarkenColor(colorVector.Y); colorVector.Z = DarkenColor(colorVector.Z);
                         Color darkenedColor = new Color(colorVector);
-                        ((SpriteBatch)spriteBatch).Draw(Game1.staminaRect, new Rectangle((int)x + (int)(36f * percentage), (int)y, 4, 8), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, darkenedColor, 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
+                        spriteBatch.Draw(Game1.staminaRect, new Rectangle(pos5.ToPoint(), size6.ToPoint()), (Rectangle)((Texture2D)Game1.staminaRect).Bounds, darkenedColor, 0f, Vector2.Zero, (SpriteEffects) 0, 0.887f);
                                           
                     } else if (gameObject.MinutesUntilReady == 0) { // remove from guessed times
                         if (!string.Equals($"{gameObject.heldObject}", "null")) {
@@ -216,8 +224,6 @@ namespace ObjectProgressBars
                     }
                 }
             }
-
-            debug_printed = true;
         }
 
         private float DarkenColor (float color) {

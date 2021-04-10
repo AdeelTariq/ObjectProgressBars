@@ -4,3 +4,6 @@
 /home/adeel/Dev/ObjectProgressBars/ObjectProgressBars/bin/Release/ObjectProgressBars.dll
 /home/adeel/Dev/ObjectProgressBars/ObjectProgressBars/obj/Release/ObjectProgressBars.csproj.CoreCompileInputs.cache
 /home/adeel/Dev/ObjectProgressBars/ObjectProgressBars/obj/Release/ObjectProgressBars.dll
+/home/adeel/Code/ObjectProgressBars/ObjectProgressBars/bin/Release/ObjectProgressBars.dll
+/home/adeel/Code/ObjectProgressBars/ObjectProgressBars/obj/Release/ObjectProgressBars.csproj.CoreCompileInputs.cache
+/home/adeel/Code/ObjectProgressBars/ObjectProgressBars/obj/Release/ObjectProgressBars.dll
